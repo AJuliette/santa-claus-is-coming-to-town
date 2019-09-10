@@ -1,0 +1,24 @@
+<%= form_for @event do |f| %>
+<div class="row">
+  <div class="col">
+    <%= f.label :title %>
+    <br/>
+      <%= f.text_field :title, class:"form-control select2" %>
+  </div>
+  <div class="col">
+    <%= f.label :amount %>
+    <br/>
+    <%= f.text_field :amount, class:"form-control select2" %>
+  </div>
+</div>
+  <h3 class="mt-3">Participants</h3>
+  <div id='participants'>
+    <%= f.fields_for :participants do |task| %>
+      <%= render 'participant_fields', :f => participant %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'Add participant', f, :participants %>
+    </div>
+  </div>
+  <%= f.submit 'Create', class:"btn btn-outline-dark mt-3 mb-3" %>
+<% end %>
