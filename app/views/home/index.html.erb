@@ -5,10 +5,11 @@
   <div class="container mb-3">
   <% if current_user %>
     <%= link_to "Create an event", new_event_path, class:"btn btn-success mt-3 mr-3"%>
-    <%= link_to "Show events", events_path, class:"btn btn-success mt-3 mr-3"%>
+    <%= link_to "Show events", events_path, class:"btn btn-warning mt-3 mr-3"%>
+    <%= link_to "Disconnect", destroy_user_session_path, class:"btn btn-danger mt-3"%>
   <% else %>
     <%= link_to "Create account", new_user_registration_path, class:"btn btn-success mt-3 mr-3"%>
-    <%= link_to "Connect", new_user_session_path, class:"btn btn-success mt-3 mr-3"%>
+    <%= link_to "Connect", new_user_session_path, class:"btn btn-success mt-3"%>
   <% end %>
   </div>
 </div>
