@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Dear <%= @giver.name %></h1>
+    <p>
+      For <%= @event.title %>, you should give a gift to <%= @recipient.name %>.
+    </p>
+    <p>
+      The max amount is <%= @event.amount %>.
+    </p>
+    <p>Have a great day!</p>
+  </body>
+</html>

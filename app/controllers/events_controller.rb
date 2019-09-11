@@ -17,6 +17,7 @@ class EventsController < ApplicationController
   def create
     @event = current_user.events.build(event_params)
     if @event.save
+      AssignSecretSanta.new(@event).perform
       redirect_to root_path
     else
       render :new
