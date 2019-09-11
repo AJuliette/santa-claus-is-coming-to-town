@@ -1,24 +1,5 @@
-# README
+# :christmas_tree: Santa Claus Is Coming To Town :christmas_tree:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+:santa: Oh oh oh! The idea behind this app was to make a light  https://www.secretsantaorganizer.com/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can see the live version here: https://santa-claus-is-coming-to-town.herokuapp.com/
