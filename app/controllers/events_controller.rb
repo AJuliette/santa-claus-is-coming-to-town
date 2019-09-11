@@ -10,15 +10,11 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
-  def show
-    @event = Event.find(params[:id])
-  end
-
   def create
     @event = current_user.events.build(event_params)
     if @event.save
       AssignSecretSanta.new(@event).perform
-      redirect_to root_path
+      redirect_to root_path, notice: "Event created, emails to the participants are on their way"
     else
       render :new
     end
