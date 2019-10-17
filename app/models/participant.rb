@@ -7,7 +7,7 @@ class Participant < ApplicationRecord
   validate :format_of_email
 
   def format_of_email
-    unless email.match?(/\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/)
+    unless email.match?(/.+@.+[.].+/)
       errors.add(:email, 'is not in the right format')
     end
   end
